@@ -203,16 +203,7 @@ on:
         type: choice
         options:
           - ophub/kernel
-      kernel_usage:
-        description: "Set the tags of the stable kernel."
-        required: false
-        default: "stable"
-        type: choice
-        options:
-          - stable
-          - flippy
-          - dev
-          - beta
+
       openwrt_storage:
         description: "Select image storage type."
         required: false
@@ -221,16 +212,6 @@ on:
         options:
           - save
           - temp
-      builder_name:
-        description: "Set OpenWrt builder signature."
-        required: false
-        default: ""
-        type: choice
-        options:
-          - ophub
-          - angel
-          - yourname
-          - 
 
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
